@@ -5,8 +5,8 @@ import Redis from "ioredis";
 import { v4 as uuidv4 } from "uuid";
 import 'dotenv/config';
 
-
-const redisClient = new Redis(process.env.REDIS_PORT ?? 6379, process.env.REDIS_HOST ?? '127.0.0.1');
+const redisPort = parseInt(process.env.REDIS_PORT);
+const redisClient = new Redis( !isNaN(redisPort) ? redisPort : 6379, process.env.REDIS_HOST ?? '127.0.0.1');
 const app = express();
 const port = 9090;
 
