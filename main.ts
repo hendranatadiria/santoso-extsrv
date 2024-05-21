@@ -114,9 +114,8 @@ app.post('/obtainSession', async (req: Request, res: Response) => {
       if ( data["sessionId"] !== sessionId) {
         throw Error('Halaman ini sedang digunakan oleh user lain, silakan coba lagi dalam 5 menit.')
       }
-    } else {
-      data = await storeData(req.body);
     }
+    data = await storeData(req.body);
     let response: ResponseData  = {
       success: true,
       responseTime: new Date().toISOString(),
