@@ -2,11 +2,11 @@
   "name": "santoso-redis",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon main.ts",
-    "build": "tsc main.ts",
+    "build": "tsc",
     "start": "node dist/main.js"
   },
   "keywords": [],

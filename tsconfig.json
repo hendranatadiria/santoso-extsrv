@@ -7,5 +7,6 @@
     "strict": true,
     "types": ["node", "express"],
     "esModuleInterop": true,
+    "sourceMap": false,
   }
 }
